@@ -1,0 +1,33 @@
+/* Estilos generales para la barra de navegación */
+.navbar {
+    background-color: #9eb8cf; /* Color de fondo azul pálido para la barra de navegación */
+    border-radius: 0; /* Elimina cualquier borde redondeado que Bootstrap aplica por defecto */
+    border: none; /* Elimina cualquier borde, asegurando que no haya líneas divisorias visibles */
+    margin: 0; /* Elimina los márgenes para asegurar que la barra se extiende completamente a lo ancho */
+}
+
+/* Estilos específicos para la marca de la barra de navegación y enlaces dentro de ella */
+.navbar-brand, .navbar-nav .nav-link {
+    color: #4b5c6b !important; /* Establece un color azul grisáceo oscuro para el texto, con '!important' para sobrescribir los estilos predeterminados de Bootstrap */
+    font-size: 20px; /* Aumenta el tamaño del texto para mejorar la legibilidad y la presencia visual */
+}   
+
+/* Estilos para el botón de alternancia (toggler), que aparece en vistas más pequeñas */
+.navbar-toggler {
+    background: #fff; /* Fondo blanco para el botón toggler, haciéndolo visible contra el fondo más oscuro de la navbar */
+    border: none; /* Elimina cualquier borde del botón toggler para un diseño más limpio */
+}
+
+/* Estilos para enlaces de la barra de navegación cuando están activos, enfocados o al pasar el ratón */
+.nav-item.active .nav-link, 
+.nav-link:hover, 
+.nav-link:focus {
+    color: #e9e9e9 !important; /* Cambia el color del texto a un gris claro cuando un enlace está activo, enfocado o se pasa el ratón sobre él, garantizando una alta visibilidad y una indicación clara de la interacción */
+}
+
+/* Estilos adicionales para el botón de búsqueda */
+.btn.search{
+    background: #5a93c2; /* Color de fondo azul para el botón, que lo hace destacar en la barra de navegación */
+    border-color: #2c3a47; /* Color del borde oscuro para el botón de búsqueda, añadiendo contraste y visibilidad */
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Define el tipo de documento, importante para la compatibilidad del navegador y el funcionamiento adecuado de HTML5 -->
+<html lang="es">
+<!-- La etiqueta raíz que define el idioma del documento como español -->
+<head>
+    <title>Calculadora bonita</title>
+    <!-- Título del documento, que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Enlace al archivo CSS externo para estilizar la página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Optimiza la conexión anticipada con Google Fonts para mejorar la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Permite la conexión con los recursos de fuentes de Google en múltiples orígenes -->
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Grey+Qo&family=Gupter:wght@400;500;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=New+Amsterdam&family=Noto+Sans+Elymaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Enlace a una amplia gama de familias de fuentes de Google Fonts para personalizar la apariencia del texto -->
+</head>
+<body>
+    <div class="calculator-container">
+         <!-- Div contenedor principal para la calculadora, que se puede estilizar a través de CSS -->
+         <h2>Calculadora</h2>
+         <!-- Título visible en la parte superior de la calculadora -->
+         <!-- Formulario que agrupa los elementos de entrada y botones de la calculadora -->
+         <input type="text" name="display" id="display" disabled>
+         <!-- Campo de texto deshabilitado para mostrar los resultados de las operaciones -->
+         <div class="buttons-container">
+                <!-- Contenedor para los botones de la calculadora, estilizado para organización y diseño -->
+                <button type="button" class="btn clear" onclick="clearDisplay()">C</button>
+                <button type="button" class="btn operator" onclick="setOperation('/')">/</button>
+                <button type="button" class="btn operator" onclick="setOperation('*')">*</button>
+                <button type="button" class="btn operator" onclick="setOperation('-')">-</button>
+
+                <button type="button" class="btn" onclick="appendValue('7')">7</button>
+                <button type="button" class="btn" onclick="appendValue('8')">8</button>
+                <button type="button" class="btn" onclick="appendValue('9')">9</button>
+                <button type="button" class="btn operator" onclick="setOperation('+')">+</button>
+
+                <button type="button" class="btn" onclick="appendValue('4')">4</button>
+                <button type="button" class="btn" onclick="appendValue('5')">5</button>
+                <button type="button" class="btn" onclick="appendValue('6')">6</button>
+                <button type="button" class="btn" style="visibility: hidden;"></button>
+
+                <button type="button" class="btn" onclick="appendValue('1')">1</button>
+                <button type="button" class="btn" onclick="appendValue('2')">2</button>
+                <button type="button" class="btn" onclick="appendValue('3')">3</button>
+                <button type="button" class="btn equals" onclick="calculateResult()">=</button>
+
+                <button type="button" class="btn" style="grid-column: span 2;" onclick="appendValue('0')">0</button>
+                <button type="button" class="btn" onclick="appendValue('.')">.</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        let operation = '';
+        let firstNumber = '';
+        let secondNumber = '';
+        let resultDisplayed = false;
+
+        function clearDisplay() {
+            document.calculator.display.value = '';
+            operation = '';
+            firstNumber = '';
+            secondNumber = '';
+            resultDisplayed = false;
+        }
+
+        function appendValue(value) {
+            if(resultDisplayed) {
+                clearDisplay();
+            }
+            document.calculator.display.value += value;
+        }
+
+        function setOperation(op) {
+            if (!resultDisplayed && document.calculator.display.value !== '') {
+                firstNumber = document.calculator.display.value;
+                operation = op;
+                document.calculator.display.value = '';
+            }
+        }
+
+        function calculateResult() {
+            if (!operation || resultDisplayed) return;
+            secondNumber = document.calculator.display.value;
+            switch (operation) {
+                case '+':
+                    document.calculator.display.value = parseFloat(firstNumber) + parseFloat(secondNumber);
+                    break;
+                case '-':
+                    document.calculator.display.value = parseFloat(firstNumber) - parseFloat(secondNumber);
+                    break;
+                case '*':
+                    document.calculator.display.value = parseFloat(firstNumber) * parseFloat(secondNumber);
+                    break;
+                case '/':
+                    if(secondNumber === '0') {
+                        alert('No se puede dividir por cero');
+                        clearDisplay();
+                        return;
+                    }
+                    document.calculator.display.value = parseFloat(firstNumber) / parseFloat(secondNumber);
+                    break;
+            }
+            resultDisplayed = true;
+        } 
+    </script>
+</body>
+</html>

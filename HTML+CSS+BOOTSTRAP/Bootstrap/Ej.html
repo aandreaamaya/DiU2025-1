@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Define que este documento es HTML5 -->
+<html lang="es">
+<!-- Establece el idioma del documento como español -->
+
+<head>
+    <title>Bootstrap</title>
+    <!-- Título del documento, aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="bt.css"/>
+    <!-- Vincula una hoja de estilos CSS externa llamada bt.css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap">
+    <!-- Importa fuentes de Google Fonts para utilizar en la página -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al CSS de Bootstrap v5.3.0 desde CDN para estilos rápidos y responsivos -->
+</head>
+
+<body class="align-items-center vh-100 bg-light">
+    <!-- Cuerpo del documento, con clases de Bootstrap para centrar contenido verticalmente y aplicar un fondo claro -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Barra de navegación de Bootstrap, configurada para ser responsiva en dispositivos grandes con 'navbar-expand-lg' -->
+        <div class="container-fluid">
+            <!-- Contenedor fluido para contenido de ancho completo -->
+            <a class="navbar-brand" href="#">Navbar</a>
+            <!-- Enlace que actúa como la marca de la barra de navegación, comúnmente usado para el logo o nombre del sitio -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Botón que permite la expansión de la barra de navegación en vistas de móviles -->
+                <span class="navbar-toggler-icon"></span>
+                <!-- Icono del botón que muestra visualmente la funcionalidad de expansión -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Contenedor para elementos de navegación que se pueden colapsar en pantallas pequeñas -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Lista no ordenada para los enlaces de navegación, con márgenes automáticos en el lado derecho -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <!-- Enlace individual en la barra de navegación, marcado como activo y representando la página actual -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        <!-- Otro enlace de navegación estándar -->
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!-- Elemento de la barra de navegación configurado como desplegable -->
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <!-- Enlace que activa el menú desplegable -->
+                        <ul class="dropdown-menu">
+                            <!-- Menú desplegable con opciones adicionales -->
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <!-- Opción en el menú desplegable -->
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <!-- Otra opción en el menú desplegable -->
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- Línea divisoria en el menú desplegable -->
+                            <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+                            <!-- Una opción más en el menú desplegable -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <!-- Enlace desactivado en la barra de navegación -->
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <!-- Formulario configurado para comportarse como una barra de búsqueda -->
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <!-- Campo de entrada para la búsqueda -->
+                    <button class="btn search" type="submit">Búsqueda</button>
+                    <!-- Botón para enviar la búsqueda -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <img src="molang.jpg" class="rounded mx-auto d-block" alt="aquideberiairmolang">
+    <!-- Imagen con clase de Bootstrap para redondear las esquinas, centrarla horizontalmente y mostrarla como un bloque -->
+</body>
+</html>

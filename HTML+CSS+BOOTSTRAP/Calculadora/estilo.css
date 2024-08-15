@@ -1,0 +1,82 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    background: #e4ccff; /* Color de fondo lila claro para la página */
+    height: 20px; /* Establece una altura específica, pero esta propiedad no es relevante a menos que el body tenga contenido que no la rebase */
+    margin: 10px; /* Espacio uniforme de 10px alrededor del borde exterior del body */
+    padding: 10px; /* Espacio interno de 10px entre el borde del body y su contenido */
+    display: block; /* Aunque 'block' es el valor por defecto para body, se especifica para claridad o reestablecimiento */
+}
+
+/* Estilos específicos para todos los elementos <h2> dentro del documento */
+h2 {
+    color: #160a1d; /* Color de texto casi negro */
+    font-size: large; /* Tamaño de fuente inicial como 'large', aunque será sobreescrito por el próximo valor */
+    font-size: 40px; /* Tamaño de fuente fijo a 40px */
+    text-align: center; /* Alinea el texto al centro del elemento <h2> */
+}
+
+/* Estilos para el contenedor principal de la calculadora */
+.calculator-container {
+    background: #b298cf; /* Color de fondo lila medio para el contenedor */
+    width: 320px; /* Ancho fijo del contenedor */
+    box-shadow: 0 10px 20px #363636; /* Sombra de caja para un efecto 3D, oscura */
+    padding: 20px; /* Espacio interno entre los bordes del contenedor y sus elementos internos */
+    border-radius: 15px; /* Bordes redondeados con un radio de 15px */
+    font-family: "Gupter", serif; /* Fuente personalizada 'Gupter' con serifa para texto dentro del contenedor */
+}
+
+/* Estilos para el elemento de visualización de la calculadora */
+#display {
+    width: 300px; /* Ancho fijo más pequeño que su contenedor para centrar */
+    height: 50px; /* Altura fija */
+    font-size: 32px; /* Tamaño grande de texto para facilitar la lectura */
+    background: rgb(213, 204, 255); /* Color de fondo lila muy claro */
+    text-align: right; /* Alinea el texto a la derecha para la entrada numérica */
+    padding: 10px; /* Espacio interno para mantener el texto alejado de los bordes */
+    margin-bottom: 20px; /* Margen inferior para separarlo de los botones debajo */
+    border: none; /* Sin bordes para un diseño más limpio */
+    border-radius: 9px; /* Bordes ligeramente redondeados */
+}
+
+/* Contenedor para los botones, usando un diseño de cuadrícula para organización */
+.buttons-container {
+    display: grid; /* Define el contenedor de botones como una cuadrícula */
+    grid-template-columns: repeat(4, 1fr); /* Divide el contenedor en 4 columnas iguales */
+    gap: 10px; /* Espacio de 10px entre los elementos de la cuadrícula */
+}
+
+/* Estilos básicos para todos los botones */
+.btn {
+    padding: 20px; /* Relleno sustancial para hacer los botones fáciles de presionar */
+    font-size: 18px; /* Tamaño de fuente claro y legible */
+    border: none; /* Sin bordes para un diseño más limpio */
+    border-radius: 8px; /* Bordes suavemente redondeados */
+    background: #8871a1; /* Color de fondo violeta grisáceo */
+    cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+    transition: 0.1s; /* Transición suave para efectos de hover */
+    color: white; /* Texto blanco para alto contraste y legibilidad */
+}
+
+/* Estilo específico para el botón '=' para destacar su importancia */
+.btn.equals {
+    background: #b944a0; /* Color de fondo rosa fuerte */
+    color: white; /* Texto blanco para mantener la consistencia con otros botones */
+    grid-row: span 2; /* Hace que el botón abarque dos filas para facilitar el acceso y la prominencia */
+}
+
+/* Estilos para los botones que realizan operaciones matemáticas */
+.btn.operator {
+    background: #963881; /* Color de fondo rosa oscuro para diferenciar los operadores */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Estilo para el botón de limpiar 'C' */
+.btn.clear {
+    background: #b944a0; /* Rosa fuerte similar al botón '=' para importancia */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Efectos para cuando el cursor pasa sobre cualquier botón */
+.btn:hover {
+    background: rgb(78, 20, 105); /* Oscurece el fondo para un feedback visual al interactuar */
+}
