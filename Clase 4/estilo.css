@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(188, 192, 216);
+    font-family: sans-serif;
+    padding: 50px 0;
+}
+.pokemon-container{
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+}
+.pokemon-image {
+    border: 2px solid #a10808;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+}

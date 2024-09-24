@@ -1,0 +1,12 @@
+body {
+    margin: 100px;
+    height: 20px;
+    padding: 100px;
+    display: block;
+    background: rgb(223, 189, 255);
+
+}
+.calculator-container{
+    background: white;
+    
+}
