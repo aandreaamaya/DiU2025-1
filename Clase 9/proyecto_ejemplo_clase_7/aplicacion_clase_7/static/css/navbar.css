@@ -1,0 +1,21 @@
+.bg-banner {
+    background-image: url('/static/img/fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80px;  
+    display: flex;
+    align-items: center;
+}
+
+
+
+.navbar .navbar-brand, .navbar-nav .nav-link {
+    color: rgb(255, 232, 219) !important; /* Cambiar color del texto a blanco */
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar .navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #ffeeba !important; /* Cambiar el color al pasar el cursor */
+}
