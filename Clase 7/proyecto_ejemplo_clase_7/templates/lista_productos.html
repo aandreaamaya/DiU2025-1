@@ -1,0 +1,16 @@
+<!-- templates/lista_productos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Productos Disponibles</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - Precio: {{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <h2 class="text-center">Nuestros Productos</h2>
+
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre }}</h5>
+                    <p class="card-text">Precio: ${{ producto.precio }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No hay productos disponibles en este momento.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
